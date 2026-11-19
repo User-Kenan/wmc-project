@@ -1,11 +1,12 @@
 import { Component, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+import { Navigation } from './shell/navigation/navigation';
 
 @Component({
-  imports: [RouterOutlet],
   selector: 'app-root',
-  styleUrl: './app.css',
+  imports: [RouterOutlet, Navigation],
   templateUrl: './app.html',
+  styleUrl: './app.css'
 })
 export class App {
   protected readonly title = signal('wmc-projekt');
